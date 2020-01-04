@@ -1,0 +1,12 @@
+#!/bin/sh
+
+docker run \
+  -it \
+  -u $(id -u):$(id -g) \
+  -p 8888:8888 \
+  --rm \
+  -v $(realpath .):/tf/notebooks \
+  -v $(realpath .local):/.local \
+  -v $(realpath .cache):/.cache \
+  -e TFHUB_CACHE_DIR='/.cache' \
+  tensorflow/tensorflow:latest-gpu-py3-jupyter
