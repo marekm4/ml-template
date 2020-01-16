@@ -3,10 +3,9 @@
 docker run \
   -it \
   -u $(id -u):$(id -g) \
+  --runtime nvidia \
   -p 8888:8888 \
   --rm \
   -v $(realpath .):/tf/notebooks \
   -v $(realpath .local):/.local \
-  -v $(realpath .cache):/.cache \
-  -e TFHUB_CACHE_DIR='/.cache' \
-  tensorflow/tensorflow:latest-gpu-py3-jupyter
+  tensorflow/tensorflow:1.15.0-gpu-py3-jupyter
