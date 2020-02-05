@@ -8,4 +8,5 @@ docker run \
   --rm \
   -v $(realpath .):/tf/notebooks \
   -v $(realpath .local):/.local \
-  tensorflow/tensorflow:1.15.0-gpu-py3-jupyter
+  -v $(realpath .cache):/.cache \
+  tensorflow/tensorflow:latest-gpu-py3-jupyter
