@@ -1,5 +1,7 @@
 #!/bin/sh
 
+docker build --tag ml:latest .
+
 docker run \
   -it \
   -u $(id -u):$(id -g) \
@@ -9,4 +11,4 @@ docker run \
   -v $(realpath .):/tf/notebooks \
   -v $(realpath .local):/.local \
   -v $(realpath .cache):/.cache \
-  tensorflow/tensorflow:latest-gpu-py3-jupyter
+  ml:latest
