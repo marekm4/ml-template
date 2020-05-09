@@ -7,6 +7,7 @@ docker run \
   -u $(id -u):$(id -g) \
   --runtime nvidia \
   --entrypoint /bin/bash \
+  -p 6006:6006 \
   --rm \
   -v $(realpath .):/tf/notebooks \
   -v $(realpath .local):/.local \
