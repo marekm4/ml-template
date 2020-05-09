@@ -1,6 +1,6 @@
 #!/bin/sh
 
-docker build --tag ml:latest .
+docker inspect --type=image ml:latest || docker build --tag ml:latest .
 
 docker run \
   -it \
