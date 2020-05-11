@@ -10,7 +10,7 @@ docker run \
   -p 6006:6006 \
   --rm \
   -v $(realpath .):/tf/notebooks \
-  -v $(realpath .local):/.local \
-  -v $(realpath .cache):/.cache \
+  -v $(realpath .local):/home/ml/.local \
+  -v $(realpath .cache):/home/ml/.cache \
   -v $(realpath .bash_history):/home/ml/.bash_history \
   ml:latest
