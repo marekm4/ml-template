@@ -1,3 +1,3 @@
 #!/bin/sh
 
-./run "--entrypoint /bin/bash"
+./.run "--entrypoint /bin/bash"
