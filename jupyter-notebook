@@ -1,6 +1,7 @@
 #!/bin/sh
 
 docker inspect --type=image ml:latest 1>/dev/null || docker build --tag ml:latest .
+touch .bash_history
 
 docker run \
   -it \
