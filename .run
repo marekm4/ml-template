@@ -12,5 +12,6 @@ docker run \
   -v $(realpath .):/tf/notebooks \
   -v $(realpath .local):/home/ml/.local \
   -v $(realpath .cache):/home/ml/.cache \
+  -v $(realpath nltk_data):/home/ml/nltk_data \
   -v $(realpath .bash_history):/home/ml/.bash_history \
   $1 ml:latest
