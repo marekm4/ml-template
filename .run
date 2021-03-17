@@ -13,5 +13,7 @@ docker run \
   -v $(realpath .local):/home/ml/.local \
   -v $(realpath .cache):/home/ml/.cache \
   -v $(realpath nltk_data):/home/ml/nltk_data \
+  -v $(realpath tfhub_data):/home/ml/tfhub_data \
   -v $(realpath .bash_history):/home/ml/.bash_history \
+  -e TFHUB_CACHE_DIR=/home/ml/tfhub_data \
   $1 ml:latest
