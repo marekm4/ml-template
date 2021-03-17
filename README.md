@@ -1,5 +1,5 @@
 # ml-template
-Starting Docker image for ML project with GPU support
+Starting Docker image for ML projects(with GPU support)
 ## Instalation
 1. Install NVIDIA drivers
 1. Install Docker
